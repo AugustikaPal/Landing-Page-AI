@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation,Link } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { brainwave } from "../assets";
@@ -67,14 +67,19 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <a
-          href="#signup"
+        <Link
+          to="/signup"
           className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
         >
           New account
-        </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign in
+        </Link>
+        <Button className="hidden lg:flex" to="/login">
+        <Link
+          to="/login"
+          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+        >
+          Login
+        </Link>
         </Button>
 
         <Button
