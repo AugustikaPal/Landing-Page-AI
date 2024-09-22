@@ -2,7 +2,9 @@
 
 
 import React, { useState } from "react";
-
+import {Gradient} from "./design/Services";
+import { HamburgerMenu ,SideLines,BackgroundCircles } from "./design/Header";
+import {Rings} from "./design/Header";
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -30,10 +32,16 @@ const Signup = () => {
   };
   
   return (
+
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-5">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+      <Gradient/>
+      <HamburgerMenu/>
+      <SideLines />
+      <BackgroundCircles/>
+      <div className="w-full max-w-md bg-n-8 rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Create an Account</h2>
-        <form onSubmit={handleSignup} className="space-y-6">
+       
+        <form onSubmit={handleSignup} className="space-y-6 ">
           <div>
             <label className="block text-sm font-medium text-gray-700">Username</label>
             <input
@@ -72,6 +80,7 @@ const Signup = () => {
           </button>
         </form>
       </div>
+      
     </div>
   );
 };

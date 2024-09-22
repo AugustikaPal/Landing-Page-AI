@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-// import {Rings} from "./design/Header"
+ import {Rings} from "./design/Header";
+ import { service1, service2, service3, check } from "../assets";
+ import {Gradient} from "./design/Services";
+import { HamburgerMenu ,SideLines,BackgroundCircles } from "./design/Header";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,13 +31,18 @@ const Login = () => {
 
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-5">
-      {/* <Rings />
-      <SideLines />
-      <BackgroundCircles /> */}
-      <div className="relative z-10 w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+  
+       <Gradient />
+       <HamburgerMenu />
+       <BackgroundCircles />
+       <SideLines />
+     
+      {/* <div className="relative z-10 w-full max-w-md shadow-lg p-8 bg-n-8 rounded-xl"> */}
+      <div className="w-full max-w-md bg-n-8 rounded-xl shadow-lg p-8">
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">Login</h2>
-        <form onSubmit={handleLogin} className="space-y-6">
+        <form onSubmit={handleLogin} className="space-y-6 ">
           <div>
+            
             <input
               type="email"
               placeholder="Email"
